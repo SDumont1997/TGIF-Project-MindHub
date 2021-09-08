@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance House of Representatives</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+    crossorigin="anonymous"
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="d-flex flex-column justify-content-between h-100%">
+    <div>
+        <header>
+          <div class="jumbotron jumbotron-fluid" id="header-jumbotron">
+            <img
+            src="./assets/us-congress-logo-png-transparent.png"
+            id="congress-logo"
+            />
+            <div class="container">
+            <h1 class="display-4" id="tgif-title">
+              Transparent Government In Fact
+            </h1>
+          </div>
+          <a href="mailto:info@tgif.com" id="tgif-email-logo"
+          ><img
+          src="./assets/kisspng-computer-icons-logo-5aead4cf068230.1198150215253393430267.png"
+          id="logo-email"
+          /></a>
+          <a href="mailto:info@tgif.com" id="tgif-email">info@tgif.com</a>
+        </div>
+      </header>
+      
+      <nav class="navbar navbar-expand-lg navbar-dark bg-danger sticky-top">
+        <div class="container">
+          <a href="#" class="navbar-brand"></a>
+          <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a href="./index.html" class="nav-link" aria-current="page">Home</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+              href="#"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+              >113th Congress</a
+              >
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a href="senate-data.html" class="dropdown-item">Senate</a>
+                </li>
+                <li>
+                  <a href="house-data.html" class="dropdown-item"
+                  >House of Representatives</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Attendance</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a href="attendance-senate.html" class="dropdown-item">Senate</a>
+                  </li>
+                  <li>
+                    <a href="#" class="dropdown-item"
+                    >House of Representatives</a
+                    >
+                  </li>
+                </ul>
+            </li>
+            <li class="nav-item dropdown">
+                <a
+                href="#"
+                class="nav-link dropdown-toggle"
+                id="navbarDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                >Party Loyalty</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li>
+                    <a href="party-loyalty-senate.html" class="dropdown-item">Senate</a>
+                  </li>
+                  <li>
+                    <a href="party-loyalty-house.html" class="dropdown-item"
+                    >House of Representatives</a
+                    >
+                  </li>
+                </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-7 p-2">
+                <h2 class="mb-3">Attendance</h2>
+                <p>The Constitution specifies that a majority of members constitutes a quorum to do business in each house. Representatives and senators rarely force the presence of a quorum by demanding quorum calls; thus, in most cases, debates continue even if a majority is not present.</p>
+                <p>The Senate uses roll-call votes; a clerk calls out the names of all the senators, each senator stating "aye" or "no" when his or her name is announced. The House reserves roll-call votes for the most formal matters, as a roll-call of all 435 representatives takes quite some time; normally, members vote by electronic device. In the case of a tie, the motion in question fails. In the Senate, the Vice President may (if present) cast the tiebreaking vote.</p>
+            </div>
+            <div class="col-5 d-flex flex-column align-items-end p-2 table-responsive">
+                <h2 class="mb-3">House at a glance</h2>
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Party</th>
+                            <th>N° of Reps</th>
+                            <th>% Missed Votes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="glance">
+                        
+                    </tbody>
+                </table> 
+                <div class="d-flex justify-content-center align-self-center w100%">
+                  <img src="./assets/ajax-loader.gif" class="ajax-loader">
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-6 p-2 table-responsive">
+                <table class="table table-hover">
+                    <h2 class="mb-2">Least Engaged (Bottom 10%)</h2>
+                    <thead>
+                        <th>Name</th>
+                        <th>N° of Missed Votes</th>
+                        <th>% Missed</th>
+                    </thead>
+                    <tbody id="bottom-ten">
+
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-center w100%">
+                  <img src="./assets/ajax-loader.gif" class="ajax-loader">
+                </div>
+            </div>
+            <div class="col-6 p-2 table-responsive">
+                <table class="table table-hover">
+                    <h2 class="mb-2">Most Engaged (Top 10%)</h2>
+                    <thead>
+                        <th>Name</th>
+                        <th>N° of Missed Votes</th>
+                        <th>% Missed</th>
+                    </thead>
+                    <tbody id="top-ten">
+
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-center w100%">
+                  <img src="./assets/ajax-loader.gif" class="ajax-loader">
+                </div>
+            </div>
+        </div>
+    </div>
+      
+      <footer class="d-flex mt-3 p-3 justify-content-center align-items-center" id="tgif-footer">
+          © 2021 TGIF | All Rights Reserved
+      </footer>
+  
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+        crossorigin="anonymous"
+      ></script>
+      <script src="./statistics.js"></script>
+</body>
+</html>
